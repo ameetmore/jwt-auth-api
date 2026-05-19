@@ -24,3 +24,8 @@ A production-ready JWT-based authentication and authorization REST API built wit
 mvn spring-boot:run
 ```
 Access H2 Console: http://localhost:8081/h2-console
+
+## Docker Commands:
+
+-docker build -t jwt-auth-api .
+-docker run -p 8081:8081 jwt-auth-api
