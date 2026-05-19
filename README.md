@@ -29,3 +29,7 @@ Access H2 Console: http://localhost:8081/h2-console
 
 -docker build -t jwt-auth-api .
 -docker run -p 8081:8081 jwt-auth-api
+
+## Markdown
+[![Spring Boot CI Pipeline](https://github.com/ameetmore/jwt-auth-api/actions/workflows/ci.yml/badge.svg)](https://github.com/ameetmore/jwt-auth-api/actions/workflows/ci.yml)
+
