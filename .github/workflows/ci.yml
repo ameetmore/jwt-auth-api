@@ -26,11 +26,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-- name: Run Tests
-  run: mvn test
+      - name: Run Tests
+        run: mvn test
 
-- name: Build Project
-  run: mvn clean package
+      - name: Build Project
+        run: mvn clean package
 
       - name: Build Docker Image
         run: docker build -t jwt-auth-api .
