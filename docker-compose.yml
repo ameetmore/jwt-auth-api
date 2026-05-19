@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  app:
+    build: .
+    container_name: jwt-auth-api
+
+    ports:
+      - "8081:8081"
+
+    depends_on:
+      - postgres
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/jwtdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+
+  postgres:
+    image: postgres:16
+
+    container_name: postgres-db
+
+    ports:
+      - "5432:5432"
+
+    environment:
+      POSTGRES_DB: jwtdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
